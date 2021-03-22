@@ -5,7 +5,6 @@ def main(argv):
     file = argv[1]
     textString = open(file).read()
 
-
     #===========feature 1: frequency of each unique word========
     wordlist = textString.split()
     wordset = set()
@@ -21,12 +20,13 @@ def main(argv):
     # print("Frequencies\n" + str(wordFreq) + "\n")
     print(str(list(zip(wordset, wordFreq))) + "\n")
 
-
     #===============featrure 2: LineCount =================
     lineCount = textString.split("\n")
     print("==========feature 2: Number of lines==========\n" + "Number of lines: " + str(len(lineCount)))
 
 
+    #===============featrure 3: CharCount =================
+    print("==========feature 3: Number of Characters==========\n" + "Number of Characters: " + str(len(textString)))
 
 
 if __name__ == "__main__":

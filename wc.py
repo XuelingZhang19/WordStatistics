@@ -1,4 +1,6 @@
 import sys
+import re
+
 
 def main(argv):
     file = argv[1]
@@ -6,6 +8,9 @@ def main(argv):
     wc(textString)
     lc(textString)
     cc(textString)
+    rl(textString)
+
+
 
 #===========feature 1: Frequency of each unique word========
 def wc(textString):
@@ -31,6 +36,29 @@ def lc(textString):
 #===============featrure 3: CharCount =================
 def cc(textString):
     print("==========feature 3: Number of Characters==========\n" + "Number of Characters: " + str(len(textString)) + "\n")
+
+
+#===============featrure 4: replace =================
+def rl(textString):
+    print("==========feature 4: Replacement==========\n")
+
+    org = input("Enter the word needs to be replaced: ")
+    target = input("Enter the word you want to replace with: ")
+    print("The program will replace \"" + org + "\" with \"" + target + "\"" + '\n')
+
+    wordlist = textString.split(" ")
+    newWorlList = []
+    print("=====Original text:" + '\n')
+    print(textString)
+    for item in wordlist:
+        word = re.search(r'[a-z]+', item).group(0)
+        if word == org:
+            newWorlList.append(item.replace(org, target))
+        else:
+            newWorlList.append(item)
+
+    print("\n" + "=====After replacement:" + "\n")
+    print(" ". join(newWorlList))
 
 
 if __name__ == "__main__":

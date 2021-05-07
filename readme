@@ -1,2 +1,7 @@
-To run the code, just run the python file "wc.py" with the text file that you want to analyze.
-command example: "python3 wc.py ./text"
+To run the main program, just run the python file "wc.py" with the text file that you want to analyze.
+command example: "python3 wc.py ./text". For the feature of replacement, you need to provide a existing word and also the new word you want to replace with.
+
+
+
+To run the unit test, run the python file "stats.py", when testing on replacement, you need to provide a existing word and also the new word you want to replace with.
+

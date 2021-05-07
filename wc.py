@@ -50,6 +50,7 @@ def rl(textString):
     newWorlList = []
     print("=====Original text:" + '\n')
     print(textString)
+
     for item in wordlist:
         word = re.search(r'[a-z]+', item).group(0)
         if word == org:
